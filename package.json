@@ -1,0 +1,44 @@
+{
+  "name": "monitor",
+  "version": "0.1.0",
+  "private": true,
+  "Author": "Thom Valadez",
+  "engines": {
+    "node": "8.x.x"
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.4.2",
+    "compression": "^1.7.3",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-fontawesome": "^1.6.1",
+    "react-json-view": "^1.19.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "deploy": "./deploy.sh",
+    "gcloud_deploy": "gcloud app deploy",
+    "start": "node server.js",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^2.3.0",
+    "semistandard": "^12.0.1"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Hello, world!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  }
+}
